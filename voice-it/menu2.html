@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Text to Speech</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+text-align: center;
+margin-top: 50px;
+background-color: #f0f8ff;
+color: #333;
+}
+h1 {
+color: #007bff;
+margin-bottom: 20px;
+}
+.info-box {
+background: #fff;
+padding: 10px;
+border-radius: 10px;
+box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+margin: 20px auto;
+width: 90%;
+text-align: left;
+}
+.container {
+display: flex;
+flex-wrap: nowrap;
+justify-content: left;
+gap: 30px;
+}
+.card {
+background: white;
+padding: 25px;
+border-radius: 10px;
+box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+text-align: center;
+width: 250px;
+}
+img {
+width: 100px;
+height: 160px;
+border-radius: 8px;
+}
+button {
+background-color: #007bff;
+color: white;
+border: none;
+padding: 10px 20px;
+font-size: 16px;
+cursor: pointer;
+border-radius: 8px;
+transition: background-color 0.3s;
+margin-top: 10px;
+}
+button:hover {
+background-color: #0056b3;
+}
+</style>
+</head>
+<body>
+<h1>SBI BANK APPLICATION FORMS</h1>
+<div class="info-box">
+<p>
+Select the form you need to fill out. Click the "Explain" button to hear a detailed voice 
+explanation of the form's purpose and how to complete it.<br><br>
+Available Forms:<br><br>
+1. Account Opening Form – Open a new savings or current account.<br>
+2. Loan Application Form – Apply for a personal, home, or vehicle loan.<br>
+3. Cheque Book Request Form – Order a new cheque book.<br>
+4. Savings Account Closure Form-To close the savings account.<br>
+5. ATM/Debit Card Request Form – Request a new or replacement debit card.<br>
+</p>
+</div>
+<div class="container">
+<div class="card">
+<p>Account Opening Form</p>
+<img src="assets/img/sbi1.jpeg">
+<button onclick="speakText1()">Explain</button>
+<script>
+function speakText1() {
+const text = `The State Bank of India NRE/FCNR Account Opening Form is designed for 
+Non-Resident Indians (NRIs) who wish to open a bank account in India. The form requires 
+detailed personal, financial, and operational information. Below is a step-by-step guide on how 
+to fill each section properly. ... By following these steps, you can properly complete the 
+NRE/FCNR Account Opening Form and submit it to the bank. It is essential to ensure that all 
+details are accurate to avoid delays in processing your account application.This includes their full name (first, middle, and last name) and selecting the appropriate title (Mr./Mrs./Ms.). Next, the date of birth should be entered in the 
+format of day, month, and year, and the gender should be marked as “M” for male or “F” for 
+female. If you have a PAN (Permanent Account Number) or GIR (General Index Register) ber, 
+date, and amount enclosed. If you are transferring money through wire transfer, provide the 
+transaction number, date, and amount transferred. Additionally, you need to enter the name 
+and address of the remitting bank, from which the funds are being sent.By following these 
+steps, you can properly complete the NRE/FCNR Account Opening Form and submit it to the 
+bank. It is essential to ensure that all details are accurate to avoid delays in processing your 
+account application.`;
+const speechSynthesis = window.speechSynthesis;
+const utterance = new SpeechSynthesisUtterance(text);
+utterance.pitch = 1;
+utterance.rate = 1;
+speechSynthesis.speak(utterance);
+}
+
+</script>
+</div>
+<div class="card">
+<p>Loan Application Form</p>
+<img src="assets/img/sbi2.jpeg">
+<button onclick="speakText2()">Explain</button>
+<script>
+function speakText2() {
+const text = `The State Bank of India (SBI) Xpress Credit Loan Application Form is used to 
+apply for a personal loan. Applicants must provide personal, employment, and financial details, 
+along with supporting documents for verification. This guide explains how to fill out the form 
+correctly.Before filling out the form, ensure that all details are written in BLOCK LETTERS, and 
+tick boxes wherever applicable. If an option is not relevant, strike it out. All dates must be in the 
+DD-MM-YYYY format. To avoid delays, applicants should submit a fully completed form along 
+with the necessary supporting documents.The form consists of multiple sections. Section A requires the applicants personal details, including name, date of birth, gender, PAN/GIR number, 
+and contact information. Section B requires employment and income details, such as the 
+applicant’s employer, monthly salary, and employment type. Section C asks for loan details, 
+processing fees, stamp duty, and insurance were collected.To successfully apply for an SBI 
+Xpress Credit Loan, applicants must carefully fill out all sections, attach the required documents, 
+and submit the completed application to the bank. Once the bank verifies the details, they will 
+process the loan and notify the applicant.`
+const speechSynthesis = window.speechSynthesis;
+const utterance = new SpeechSynthesisUtterance(text);
+// Optional: Customize voice and pitch
+utterance.pitch = 1;
+utterance.rate = 1;
+speechSynthesis.speak(utterance);
+}
+</script>
+</div>
+<div class="card">
+<p>Cheque Book Request Form</p>
+<img src="assets/img/sbi3.jpeg">
+<button onclick="speakText3()">Explain</button>
+<script>
+function speakText3() {
+const text = `The State Bank of India (SBI) Cheque Book Request Form is used by customers 
+to request a new cheque book for their Current Account (CA) or Savings Account (SB). To 
+complete the form correctly, the applicant must provide personal details, account information, 
+and agree to the bank's terms regarding charges and collection.The form begins with a request 
+section where the applicant must mention the number of cheque books required. The customer 
+must also agree to deduct the charges from their account. The charges are specified as MVR 60 
+for a 25-leaf SB cheque book, MVR 80 for a 40-leaf SB cheque book, and USD 12/MVR 180 for a form is for bank use only and serves as an acknowledgment of the cheque book request. The 
+bank official will fill in the request date, the name of the customer, and the account number(s). 
+The bank instructs the customer to collect the cheque book between 3 to 10 working days.To 
+successfully request a cheque book, the applicant must ensure that all fields are accurately 
+completed, the required balance is maintained, and they collect the cheque book within the 
+stipulated time to avoid cancellation.`
+const speechSynthesis = window.speechSynthesis;
+const utterance = new SpeechSynthesisUtterance(text);
+// Optional: Customize voice and pitch
+utterance.pitch = 1;
+utterance.rate = 1;
+speechSynthesis.speak(utterance);
+}
+</script>
+</div>
+<div class="card">
+<p>Savings Account Closure Form</p>
+<img src="assets/img/sbi4.jpeg">
+<button onclick="speakText4()">Explain</button>
+<script>
+function speakText4() {
+const text = `The Savings Bank Account Closure Form from the State Bank of India (SBI) is 
+used by customers to formally request the closure of their savings account. To initiate the 
+process, the account holder(s) must provide their name, account number, and mobile number 
+at the top of the form.The applicant must then indicate their preferred method of receiving the 
+remaining balance in the account after deducting usual bank charges. The available options 
+include: receiving the balance in cash, getting a banker’s cheque or draft, transferring the 
+balance to another domestic bank account, or transferring the balance to an overseas account. 
+If choosing to transfer funds to another account, the applicant must provide the account 
+number, bank name, branch details, district, state, branch code, and IFSC/BIC number for 
+accurate processing.Additionally, the account holder(s) must confirm whether any cheque book has been issued for the account. If they have unused cheque leaves, they must return them to 
+the bank for necessary action. If no cheque book was issued, they need to state this explicitly. 
+Any non-applicable sections must be struck out to avoid ambiguity.The next section requires the 
+signatures of all account holders, confirming their consent for the account closure.The final 
+portion of the form is for bank officials to verify and process the request. The officer-in-charge 
+will check the authenticity of the account holder’s signature(s), recover any applicable charges, 
+and officially close the account. The date of closure and DC (Debit/Credit) number are recorded 
+as part of the formal bank process.To ensure a smooth account closure process, customers must 
+complete the form correctly, provide all necessary details, and return any unused cheque 
+books.`
+const speechSynthesis = window.speechSynthesis;
+const utterance = new SpeechSynthesisUtterance(text);
+// Optional: Customize voice and pitch
+utterance.pitch = 1;
+utterance.rate = 1;
+speechSynthesis.speak(utterance);
+}
+</script>
+</div>
+<div class="card">
+<p>ATM Card Application Form</p>
+<img src="assets/img/sbi5.jpeg">
+<button onclick="speakText5()">Explain</button>
+<script>
+function speakText5() {
+const text = `The State Bank of India (SBI) ATM Card Application Form is used to request an 
+ATM card for either a savings or current account. The form must be filled out completely in 
+capital letters without writing outside the provided boxes. Applicants should ensure that all 
+details are correctly mentioned to avoid delays in processing.The form requires the applicant's This is particularly important for joint account holders, as separate forms must be filled for each 
+holder.Finally, the office use section is meant for the bank officials to fill in details such as ATM 
+branch code, application serial number, old ATM card number (if applicable), and the new ATM 
+card number. The bank official will also stamp and sign this section for verification. The form 
+must be submitted to the bank along with any required supporting documents for approval.`
+const speechSynthesis = window.speechSynthesis;
+const utterance = new SpeechSynthesisUtterance(text);
+// Optional: Customize voice and pitch
+utterance.pitch = 1;
+utterance.rate = 1;
+speechSynthesis.speak(utterance);
+}
+</script>
+</div>
+</div>
+</body>
+</html>
